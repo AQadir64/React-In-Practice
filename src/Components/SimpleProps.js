@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import ComponentRendering from "./ComponentRendering";
 import UpdatingTheElement from "./UpdatingTheElement";
+import FunctionalComponent from "./FunctionalComponent";
+import StateComponent from "./StateComponent";
+import SetStateComponent from "./SetStateComponent";
 export default class SimpleProps extends Component {
   render() {
     return (
       <div>
+        <SetStateComponent />
+        <StateComponent />
         <UpdatingTheElement />
-        <ComponentRendering
+        <FunctionalComponent
           foods={[
             {
               id: 1,
