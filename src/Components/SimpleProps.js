@@ -4,10 +4,14 @@ import UpdatingTheElement from "./UpdatingTheElement";
 import FunctionalComponent from "./FunctionalComponent";
 import StateComponent from "./StateComponent";
 import SetStateComponent from "./SetStateComponent";
+import Main from "./PropTypesComponent";
+import ControledComponent from "./ControledComponent";
 export default class SimpleProps extends Component {
   render() {
     return (
       <div>
+        <Main />
+        <ControledComponent />
         <SetStateComponent />
         <StateComponent />
         <UpdatingTheElement />
