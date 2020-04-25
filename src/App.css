@@ -36,3 +36,134 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  font-family: "Orbitron", sans-serif;
+}
+
+ol {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  list-style: none;
+}
+
+.menu-item {
+  background: #444;
+  padding: 1em 0.5em;
+  position: relative;
+  border-bottom: 5px solid #999;
+  margin: 0 0.1em;
+  -webkit-transition: border-bottom 0.23s ease-in-out, background 0.23s linear;
+  transition: border-bottom 0.23s ease-in-out, background 0.23s linear;
+  cursor: pointer;
+  min-width: 8em;
+  text-align: center;
+}
+.menu-item-active {
+  color: blue !important;
+}
+.menu-item[aria-haspopup="true"] {
+  border-bottom-color: #fc9b1b;
+}
+.menu-item:hover,
+.menu-item:focus-within {
+  border-bottom-color: #91d36b;
+  background: #333;
+}
+.menu-item:hover .sub-menu,
+.menu-item:hover .sub-menu:hover,
+.menu-item:focus-within .sub-menu,
+.menu-item:focus-within .sub-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  display: -webkit-box;
+  display: flex;
+}
+
+.sub-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  margin-top: 1em;
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+.sub-menu .menu-item {
+  margin: 0.1em 0;
+  padding: 1em;
+  width: 10em;
+  text-align: center;
+  z-index: 2;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:focus {
+  outline: none;
+}
+
+@media (max-width: 690px) {
+  .menu {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .menu-item {
+    margin: 0.1em;
+  }
+  .menu-item:nth-child(1) {
+    -webkit-box-ordinal-group: 1;
+    order: 0;
+  }
+  .menu-item:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+  .menu-item:nth-child(3) {
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+  }
+  .menu-item:nth-child(4) {
+    -webkit-box-ordinal-group: 5;
+    order: 4;
+  }
+  .menu-item:nth-child(5) {
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+  }
+}
+@media (max-width: 480px) {
+  .menu {
+    font-size: 12px;
+  }
+}
