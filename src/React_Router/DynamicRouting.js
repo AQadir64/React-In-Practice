@@ -10,6 +10,10 @@ import PageNotFound from "./PageNotFound";
 import Kabobs from "./Kabobs";
 import UrlParameter from "./UrlParameter";
 import Color from "./Color";
+import LoggingHome from "./LoggingHome";
+import LoginPage from "./LoginPage";
+import PrivateRoute from "./PrivateRoute";
+import ProtectedPage from "./ProtectedPage";
 export default function DynamicRouting() {
   return (
     <Router>
@@ -21,6 +25,11 @@ export default function DynamicRouting() {
         <Route path="/props" component={PropsViewer} />
         <Route path="/kabobs" component={Kabobs} exact />
         <Route path="/kabobs/:name" component={UrlParameter} />
+        <Route path="/logging" component={LoggingHome} />
+        <Route path="/login" component={LoginPage} />
+        <PrivateRoute path="/protected">
+          <ProtectedPage />
+        </PrivateRoute>
         <Route
           path="/color"
           render={() => {

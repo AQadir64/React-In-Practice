@@ -64,6 +64,14 @@ function Navbar() {
         <li className="menu-item">
           <Link to="/signup">SignUp</Link>
         </li>
+
+        <li className="menu-item">
+          <Link to="/logging">Login</Link>
+        </li>
+
+        <li className="menu-item">
+          <Link to="/protected">Protected</Link>
+        </li>
       </ol>
     </nav>
   );
