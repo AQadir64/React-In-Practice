@@ -3,11 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 // import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import DynamicRouting from "./React_Router/DynamicRouting";
+import Context from "./Advanced/ContextApi/Context";
 
-ReactDOM.render(
-
-<DynamicRouting />, document.getElementById("root"));
+ReactDOM.render(<Context />, document.getElementById("root"));
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
