@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import InputFocus from "./Advanced/Ref/InputFocus";
 import "./index.css";
 // import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Context from "./Advanced/ContextApi/Context";
+import FRParentInput from "./Advanced/Ref/FRParentInput";
 
-ReactDOM.render(<Context />, document.getElementById("root"));
+ReactDOM.render(<FRParentInput />, document.getElementById("root"));
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
